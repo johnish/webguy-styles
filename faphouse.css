@@ -1,43 +1,45 @@
 @-moz-document domain("faphouse.com") {
     /* ==UserStyle==
     @name           WebGuy Video Customization
+    @author         WebGuy
     @description    Removes the right rail for related videos and ensures main video fits the container.
     @version        1.0.0
-    @namespace      https://userstyles.world/
-    @supportURL     https://github.com/johnish/
-    @author         WebGuy
+    @namespace      https://github.com/johnish/
+    @homepageURL    https://github.com/johnish/webguy-styles
+    @supportURL     https://github.com/johnish/webguy-styles
+    @updateURL      https://github.com/johnish/webguy-styles/blob/main/faphouse.css
+    @license        unlicense
+    @preprocessor   default
     ==/UserStyle== */
-}
-
-/*
-WebGuy removed the right rail for related videos.
-*/
-
-.video {
-    max-width: 100%;
-}
-
-/* Ensures main video fits the container */
-.video__main.video__main_gold {
-    width: 100%;
-    height: auto;
-}
-
-/* Removes related video section */
-.video__related.video__related_studio {
-    display: none;
-}
-
-/* WebKit-specific rules */
-@media screen and (-webkit-min-device-pixel-ratio:0) {
+    /*
+    WebGuy removed the right rail for related videos.
+    */
     .video {
         max-width: 100%;
     }
+
+    /* Ensures main video fits the container */
     .video__main.video__main_gold {
         width: 100%;
         height: auto;
     }
+
+    /* Removes related video section */
     .video__related.video__related_studio {
         display: none;
+    }
+
+    /* WebKit-specific rules */
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        .video {
+            max-width: 100%;
+        }
+        .video__main.video__main_gold {
+            width: 100%;
+            height: auto;
+        }
+        .video__related.video__related_studio {
+            display: none;
+        }
     }
 }
